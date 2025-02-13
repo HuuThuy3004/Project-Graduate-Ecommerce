@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+
+@layer base {
+  h1 {
+    @apply text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl font-bold;
+  }
+
+  h4 {
+    @apply text-lg font-bold;
+  }
+}
+
+@layer components {
+  .icon-social-network {
+    @apply text-white bg-gray-700 p-2 rounded-full w-8 h-8 cursor-pointer;
+  }
+
+  .input {
+    @apply block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-purple-500;
+  }
+
+  .card {
+    @apply bg-white border border-gray-300 rounded-md p-6 shadow-md;
+  }
+
+  .card-header {
+    @apply flex justify-between items-center;
+  }
+
+  .card-footer {
+    @apply flex justify-between items-center;
+  }
+}
