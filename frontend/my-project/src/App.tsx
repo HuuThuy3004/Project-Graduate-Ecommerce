@@ -1,16 +1,15 @@
 import "./App.css";
 import Footer from "./layout/footer/Footer";
 import Header from "./layout/header/Header";
-import SignUp from "./components/signup/SignUp";
-import SignIn  from "./components/signin/SignIn";
+import HomePage from "./pages/homepage/Homepage";
 
 function App() {
   return (
     <div className="grid grid-cols-5">
-      <Header />
-      <SignIn />
-      <SignUp />
-      <Footer />
+      {/* <Header /> */}
+      <HomePage/>
+ 
+      {/* <Footer /> */}
     </div>
   );
 }

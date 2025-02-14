@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ImageSignUp from '../../assets/images/signin-signup/7978386d686a5f686ad7fbc612e2db01.jpg'
+import ImageSignUp from "../../assets/images/signin-signup/7978386d686a5f686ad7fbc612e2db01.jpg";
 
 const SignUp = () => {
   const [username, setUsername] = useState("");
@@ -16,10 +16,13 @@ const SignUp = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 col-span-5">
-      <div className="bg-purple-600 text-white h-[524px] w-[450px] shadow-lg">
-        <img src={ImageSignUp} alt="" className="w-[380px] h-[280px] ml-10 mt-10 rounded-lg shadow-md"/>
-        <p className="text-center p-20 text-2xl font-bold">Create your account. Welcome to Store</p>
-      </div>
+      {/* Image Sign Up */}
+      <img
+        src={ImageSignUp}
+        className="h-[619px] w-[450px]  shadow-md"
+      />
+
+      {/* Form Sign Up */}
       <div className="w-full max-w-md p-8 space-y-6 bg-white shadow-lg">
         <h2 className="text-2xl font-bold text-center">Sign Up</h2>
         <form className="space-y-4" onSubmit={handleSubmit}>
@@ -85,20 +88,26 @@ const SignUp = () => {
               required
               checked={agree}
               onChange={() => setAgree(!agree)}
-              className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 cursor-pointer"
             />
-            <label className="ml-2 text-sm text-gray-600">
+            <label className="ml-2 text-sm text-gray-600 ">
               I agree to the{" "}
               <a href="#" className="text-blue-600 hover:underline">
                 terms and conditions
               </a>
             </label>
           </div>
-          <button
-            type="submit"
-            className="w-full px-4 py-2 text-white bg-purple-600 rounded-md hover:bg-purple-700 focus:outline-none"
-          >
+          <button type="submit" className="button-signin-signup">
             Sign Up
+          </button>
+          <div className="flex items-center justify-between">
+            <hr className="flex-grow border-gray-300" />
+            <span className="mx-2 text-gray-500">OR</span>
+            <hr className="flex-grow border-gray-300" />
+          </div>
+          <button className="button-google">
+            <i className="fa-brands fa-google mr-2"></i>
+            Sign In with Google
           </button>
         </form>
       </div>

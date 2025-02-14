@@ -5,7 +5,7 @@ const SignIn = () => {
     <div className="flex items-center justify-center min-h-screen bg-gray-100 col-span-5">
       {/* Image Sign In */}
       <div className="relative">
-        <img src={ImageSignIn} alt="" className="h-[435px] shadow-lg" />
+        <img src={ImageSignIn} alt="" className="h-[435px] w-[430px] shadow-lg" />
       </div>
       {/* Form Sign In */}
       <div className="w-full max-w-md p-8 space-y-6 bg-white shadow-lg">
@@ -37,7 +37,7 @@ const SignIn = () => {
           </div>
           <button
             type="submit"
-            className="w-full px-4 py-2 text-white bg-purple-600 rounded-md hover:bg-purple-700 focus:outline-none"
+            className="button-signin-signup "
           >
             Sign In
           </button>
@@ -47,7 +47,7 @@ const SignIn = () => {
           <span className="mx-2 text-gray-500">OR</span>
           <hr className="flex-grow border-gray-300" />
         </div>
-        <button className="w-full px-4 py-2 text-white bg-red-600 rounded-md hover:bg-red-700 focus:outline-none">
+        <button className="button-google">
           <i className="fa-brands fa-google mr-2"></i>
           Sign In with Google
         </button>
