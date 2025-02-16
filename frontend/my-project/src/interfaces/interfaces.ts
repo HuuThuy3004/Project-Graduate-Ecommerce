@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 export interface Category {
     title: string,
     image: string, 
@@ -24,4 +26,10 @@ export interface BigZone {
 export interface CategoriesBoth {
     name: string,
     image: string,
+}
+
+export interface AboutUs {
+    title: string,
+    subTitle: string,
+    icon: ReactElement<any, any>,
 }

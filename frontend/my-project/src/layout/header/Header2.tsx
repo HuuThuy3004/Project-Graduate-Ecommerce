@@ -1,22 +1,21 @@
+import { Link } from "react-router-dom";
 
 export default function Header2() {
   return (
-    <div>
+    <div className="col-span-5">
       <header className="flex justify-between items-center p-4 shadow-md bg-white">
         {/* Logo */}
-        <div className="text-2xl font-semibold italic">
-          <p className="text-black">Logo.</p>
-        </div>
+        <p className="text-black text-2xl font-semibold italic">Logo.</p>
 
         {/* Navigation */}
         <nav className="flex gap-6 text-gray-600 font-medium">
-          <a href="#" className="text-black font-semibold">
+          <Link to="/" className="text-black font-semibold">
             Home
-          </a>
+          </Link>
           <a href="#">Men</a>
           <a href="#">Women</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
 
         {/* Search & Icons */}
