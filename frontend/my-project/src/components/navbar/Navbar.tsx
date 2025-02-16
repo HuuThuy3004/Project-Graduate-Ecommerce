@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [language, setLanguage] = useState("English");
@@ -30,10 +31,10 @@ const Navbar = () => {
 
         {/* Login & Sign Up Buttons */}
         <button className="bg-purple-600 text-white px-4 py-2 rounded-lg">
-          Login
+          <Link to="/sign-in">Sign In</Link>
         </button>
         <button className="border border-gray-400 text-purple-600 px-4 py-2 rounded-lg">
-          Sign Up
+          <Link to="/sign-up">Sign Up</Link>
         </button>
       </div>
     </nav>

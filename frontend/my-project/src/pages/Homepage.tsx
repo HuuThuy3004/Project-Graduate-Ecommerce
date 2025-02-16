@@ -1,57 +1,58 @@
 import { useState } from "react";
 import { Carousel } from "antd";
-import { Banner, BigZone, CategoriesBoth } from "../../interfaces/interfaces";
-import { Category } from "../../interfaces/interfaces";
-import Footer from "../../layout/footer/Footer";
+import { Banner, BigZone, CategoriesBoth } from "../interfaces/interfaces";
+import { Category } from "../interfaces/interfaces";
+import Footer from "../layout/footer/Footer";
 
-import ImageSidle1 from "../../assets/images/image-silde/photo-1739382120673-54ec4d63dc62.avif";
-import ImageSidle2 from "../../assets/images/image-silde/photo-1738830986230-57029d6ef4f8.avif";
-import ImageSidle3 from "../../assets/images/image-silde/photo-1644483878406-bc4a2f63de83.avif";
-import ImageSidle4 from "../../assets/images/image-silde/photo-1737994874349-9da316080f17.avif";
-import ImageSidle5 from "../../assets/images/image-silde/photo-1735293840436-b6950d1cdb1a.avif";
-import Header2 from "../../layout/header/Header2";
+import ImageSidle1 from "../assets/images/image-silde/photo-1739382120673-54ec4d63dc62.avif";
+import ImageSidle2 from "../assets/images/image-silde/photo-1738830986230-57029d6ef4f8.avif";
+import ImageSidle3 from "../assets/images/image-silde/photo-1644483878406-bc4a2f63de83.avif";
+import ImageSidle4 from "../assets/images/image-silde/photo-1737994874349-9da316080f17.avif";
+import ImageSidle5 from "../assets/images/image-silde/photo-1735293840436-b6950d1cdb1a.avif";
+import Header2 from "../layout/header/Header2";
 
-import ImagePerson1 from "../../assets/images/image-silde/577fb5ded340b669c0ceef4d6e660fec-removebg-preview.png";
-import ImagePerson2 from "../../assets/images/image-silde/kolp-removebg-preview.png";
+import ImagePerson1 from "../assets/images/image-silde/577fb5ded340b669c0ceef4d6e660fec-removebg-preview.png";
+import ImagePerson2 from "../assets/images/image-silde/kolp-removebg-preview.png";
 
-import CategoryImage1 from "../../assets/images/categories/new-arrival/category-jogger.jpg";
-import CategoryImage2 from "../../assets/images/categories/new-arrival/active-Tshirt.jpg";
-import CategoryImage3 from "../../assets/images/categories/new-arrival/seelve.jpg";
-import CategoryImage4 from "../../assets/images/categories/new-arrival/urban.jpg";
-import CategoryImage5 from "../../assets/images/categories/new-arrival/Blouses & Shirts.jpg";
-import CategoryImage6 from "../../assets/images/categories/new-arrival/Crop Tops.jpg";
-import CategoryImage7 from "../../assets/images/categories/new-arrival/Jackets & Blazers.jpg";
-import CategoryImage8 from "../../assets/images/categories/new-arrival/Suits.jpg";
+import CategoryImage1 from "../assets/images/categories/new-arrival/category-jogger.jpg";
+import CategoryImage2 from "../assets/images/categories/new-arrival/active-Tshirt.jpg";
+import CategoryImage3 from "../assets/images/categories/new-arrival/seelve.jpg";
+import CategoryImage4 from "../assets/images/categories/new-arrival/urban.jpg";
+import CategoryImage5 from "../assets/images/categories/new-arrival/Blouses & Shirts.jpg";
+import CategoryImage6 from "../assets/images/categories/new-arrival/Crop Tops.jpg";
+import CategoryImage7 from "../assets/images/categories/new-arrival/Jackets & Blazers.jpg";
+import CategoryImage8 from "../assets/images/categories/new-arrival/Suits.jpg";
 
-import ImageBigZone1 from "../../assets/images/image-bigzone/bigzone-person1-removebg-preview.png";
-import ImageBigZone2 from "../../assets/images/image-bigzone/bigzone-person2-removebg-preview.png";
-import ImageBigZone3 from "../../assets/images/image-bigzone/bigzone-person3-removebg-preview.png";
-import ImageBigZone4 from "../../assets/images/image-bigzone/bigzone-person4-removebg-preview.png";
-import ImageBigZone5 from "../../assets/images/image-bigzone/bigzone-person5-removebg-preview.png";
+import ImageBigZone1 from "../assets/images/image-bigzone/bigzone-person1-removebg-preview.png";
+import ImageBigZone2 from "../assets/images/image-bigzone/bigzone-person2-removebg-preview.png";
+import ImageBigZone3 from "../assets/images/image-bigzone/bigzone-person3-removebg-preview.png";
+import ImageBigZone4 from "../assets/images/image-bigzone/bigzone-person4-removebg-preview.png";
+import ImageBigZone5 from "../assets/images/image-bigzone/bigzone-person5-removebg-preview.png";
 
-import ShirtCategories from "../../assets/images/categories/men/shirt.jpg";
-import ActiveWearCategories from "../../assets/images/categories/men/activewear.jpg";
-import PoloCategories from "../../assets/images/categories/men/polo.jpg";
-import HoodiesCategories from "../../assets/images/categories/men/hoodies.jpg";
-import JeansCategories from "../../assets/images/categories/men/jeans.jpg";
-import PlainShirtsCategories from "../../assets/images/categories/men/plain-shirt.jpg";
-import PrintedTShirtCategories from "../../assets/images/categories/men/printed-Tshirt.jpg";
-import BoxersCategories from "../../assets/images/categories/men/boxers.jpg";
+import ShirtCategories from "../assets/images/categories/men/shirt.jpg";
+import ActiveWearCategories from "../assets/images/categories/men/activewear.jpg";
+import PoloCategories from "../assets/images/categories/men/polo.jpg";
+import HoodiesCategories from "../assets/images/categories/men/hoodies.jpg";
+import JeansCategories from "../assets/images/categories/men/jeans.jpg";
+import PlainShirtsCategories from "../assets/images/categories/men/plain-shirt.jpg";
+import PrintedTShirtCategories from "../assets/images/categories/men/printed-Tshirt.jpg";
+import BoxersCategories from "../assets/images/categories/men/boxers.jpg";
 
-import HoodiesWomenCategories from "../../assets/images/categories/women/hoodies-sweetshirts-women.jpg";
-import CoatsWomenCategories from "../../assets/images/categories/women/coats-parkas-women.jpg";
-import TShirtWomenCategories from "../../assets/images/categories/women/tshirts-women.jpg";
-import BoxersWomenCategories from "../../assets/images/categories/women/boxers-women.jpg";
+import HoodiesWomenCategories from "../assets/images/categories/women/hoodies-sweetshirts-women.jpg";
+import CoatsWomenCategories from "../assets/images/categories/women/coats-parkas-women.jpg";
+import TShirtWomenCategories from "../assets/images/categories/women/tshirts-women.jpg";
+import BoxersWomenCategories from "../assets/images/categories/women/boxers-women.jpg";
 
-import Nike from "../../assets/images/brands/nike.jpg";
-import Burberry from "../../assets/images/brands/burberry.jpg";
-import Adidas from "../../assets/images/brands/addidas.jpg";
-import Levis from "../../assets/images/brands/levis.jpg";
-import Prada from "../../assets/images/brands/prada.jpg";
+import Nike from "../assets/images/brands/nike.jpg";
+import Burberry from "../assets/images/brands/burberry.jpg";
+import Adidas from "../assets/images/brands/addidas.jpg";
+import Levis from "../assets/images/brands/levis.jpg";
+import Prada from "../assets/images/brands/prada.jpg";
 
-import Avatar1 from '../../assets/images/avatars/03ebd625cc0b9d636256ecc44c0ea324.jpg'
-import Avatar2 from '../../assets/images/avatars/70a236f90d2803f9da32d0558be75ba1.jpg'
-import Avatar3 from '../../assets/images/avatars/c2ee3d3c8d1c91c21fb796750dc042ae.jpg'
+import Avatar1 from "../assets/images/avatars/03ebd625cc0b9d636256ecc44c0ea324.jpg";
+import Avatar2 from "../assets/images/avatars/70a236f90d2803f9da32d0558be75ba1.jpg";
+import Avatar3 from "../assets/images/avatars/c2ee3d3c8d1c91c21fb796750dc042ae.jpg";
+import Header from "../layout/header/Header";
 const banners: Banner[] = [
   {
     title: "High Coziness",
@@ -242,6 +243,7 @@ const HomePage = () => {
   return (
     <div className="col-span-5">
       {/* Header  */}
+      {/* <Header/> */}
       <Header2 />
       {/* Banners Carousel */}
       <div>
